@@ -11,16 +11,16 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
+import koanLogo from '@/images/logos/koanLogo.png'
+import walmartLogo from '@/images/logos/walmartLogo.jpg'
+import icfLogo from '@/images/logos/icf.png'
+import image1 from '@/images/photos/image-1.png'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
+import Skills from '@/components/Skills'
 
 function MailIcon(props) {
   return (
@@ -145,7 +145,7 @@ function Role({ role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        <Image src={role.logo} alt="" className="h-7 w-7 rounded-xl" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -173,35 +173,25 @@ function Role({ role }) {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      company: 'Feature Store',
+      title: 'Walmart Global Tech',
+      logo: walmartLogo,
+      start: 'I have 11+ years of experience in building complex systems to make scaling and collaboration easy for designers and creative teams. Most of my work involves Javascript, HTML, CSS but I also dabble in Python & MongoDB. In previous avatars I have done both User Experience Design & Mobile Application Development as a Freelance developer.',
+      end: '',
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'Insights>Ally',
+      title: 'Walmart Global Tech',
+      logo: walmartLogo,
+      start: 'I have 11+ years of experience in building complex systems to make scaling and collaboration easy for designers and creative teams. Most of my work involves Javascript, HTML, CSS but I also dabble in Python & MongoDB. In previous avatars I have done both User Experience Design & Mobile Application Development as a Freelance developer.',
+      end: '',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Insights>Ally',
+      title: 'Walmart Global Tech',
+      logo: walmartLogo,
+      start: 'May 2020',
+      end: '',
     },
   ]
 
@@ -209,7 +199,51 @@ function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3">Recent Projects</span>
+      </h2>
+      <ol className="mt-6 space-y-4">
+        {resume.map((role, roleIndex) => (
+          <Role key={roleIndex} role={role} />
+        ))}
+      </ol>
+
+    </div>
+  )
+}
+
+function WorkExperience() {
+  let resume = [
+    {
+      company: 'Walmart Global Tech',
+      title: 'Senior Software Engineer(Frontend)',
+      logo: walmartLogo,
+      start: 'May 2020',
+      end: {
+        label: 'Present : (4 Years, 9 Months)',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'ICF Next(Amway)',
+      title: 'Lead Frontend Engineer',
+      logo: icfLogo,
+      start: 'Jan 2015',
+      end: 'Apr 2020 : (5 Years 5 Months)',
+    },
+    {
+      company: 'Koan Digital Solutions Pvt. Ltd.',
+      title: 'Frontend Engineer',
+      logo: koanLogo,
+      start: 'Jul 2013',
+      end: 'Dec 2014',
+    }
+  ]
+
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Overall Work Experience</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
@@ -220,6 +254,71 @@ function Resume() {
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
+    </div>
+  )
+}
+
+function Bento() {
+  return (
+
+    <div className="">
+      <div className="mx-auto max-w-2xl lg:max-w-7xl">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+          <div className="flex p-px lg:col-span-4">
+            <div className="overflow-hidden rounded-lg bg-gray-800 ring-1 ring-white/15 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]">
+              <Resume />
+            </div>
+          </div>
+          <div className="flex p-px lg:col-span-2">
+            <div className="overflow-hidden rounded-lg bg-gray-800 ring-1 ring-white/15 lg:rounded-tr-[2rem]">
+              <WorkExperience />
+              <div className="p-10">
+                <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                  <BriefcaseIcon className="h-6 w-6 flex-none" />
+                  <span className="ml-3">Education</span>
+                </h2>
+                <p className="mt-2 text-lg font-medium tracking-tight text-white">Connect your favorite tools</p>
+                <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
+                  Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus massa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex p-px lg:col-span-2">
+            <div className="overflow-hidden rounded-lg bg-gray-800 ring-1 ring-white/15 lg:rounded-bl-[2rem]">
+              <img
+                alt=""
+                src="https://tailwindui.com/plus/img/component-images/bento-02-security.png"
+                className="h-80 object-cover"
+              />
+              <div className="p-10">
+                <h3 className="text-sm/4 font-semibold text-gray-400">Security</h3>
+                <p className="mt-2 text-lg font-medium tracking-tight text-white">Advanced access control</p>
+                <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
+                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex p-px lg:col-span-4">
+            <div className="overflow-hidden rounded-lg bg-gray-800 ring-1 ring-white/15 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]">
+              <img
+                alt=""
+                src="https://tailwindui.com/plus/img/component-images/bento-02-performance.png"
+                className="h-80 object-cover object-left"
+              />
+              <div className="p-10">
+                <h3 className="text-sm/4 font-semibold text-gray-400">Performance</h3>
+                <p className="mt-2 text-lg font-medium tracking-tight text-white">Lightning-fast builds</p>
+                <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
+                  Sed congue eros non finibus molestie. Vestibulum euismod augue vel commodo vulputate. Maecenas at
+                  augue sed elit dictum vulputate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
@@ -289,17 +388,10 @@ export default async function Home() {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
-            <Resume />
-          </div>
-        </div>
+        <Skills />
+      </Container>
+      <Container className="mt-24 md:mt-28">
+        <Bento />
       </Container>
     </>
   )

@@ -5,12 +5,12 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - Spencer Sharp',
+    template: '%s - Himesh Vats',
     default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+      'Himesh Vats - Software Engineer, Designer, and Music Producer',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+    'I’m Himesh Vats, a software engineer and musician based in Bengaluru, India. I’m currently building amazing products for Walmart Global Tech, where we develop technologies that empower people to explore Walmart Stores and Services easily.',
 }
 
 export default function RootLayout({ children }) {
