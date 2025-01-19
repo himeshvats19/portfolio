@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:worker":"cloudflare",
+    "dev:wroker":"wrangler dev --port 8771",
+    "preview:worker":"npm run build:worker && npm run dev:worker",
+    "deploy:worker":"npm run build:worker && wrangler deploy"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -15,6 +19,7 @@
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.4",
+    "@opennextjs/cloudflare": "^0.3.8",
     "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.12",
     "cheerio": "^1.0.0-rc.12",
