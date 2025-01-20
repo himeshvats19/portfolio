@@ -12,7 +12,7 @@ import {
   XIcon,
 } from '@/components/SocialIcons'
 import koanLogo from '@/images/logos/koanLogo.png'
-import walmartLogo from '@/images/logos/walmartLogo.jpg'
+import walmartLogo from '@/images/walmartLogo.jpg'
 import icfLogo from '@/images/logos/icf.png'
 import image1 from '@/images/photos/image-1.png'
 import image2 from '@/images/photos/image-2.jpg'
