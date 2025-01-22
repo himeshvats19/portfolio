@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import ColourfulText from "@/components/ui/colourful-text";
 import {
   GitHubIcon,
   InstagramIcon,
@@ -21,6 +22,7 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
 import Skills from '@/components/Skills'
+import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
 
 function MailIcon(props) {
   return (
@@ -81,20 +83,6 @@ function ArrowDownIcon(props) {
   )
 }
 
-function Article({ article }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
@@ -104,34 +92,6 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
-function Newsletter() {
-  return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
-      </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
-      </div>
-    </form>
-  )
-}
 
 function Role({ role }) {
   let startLabel =
@@ -266,7 +226,9 @@ function Bento() {
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
           <div className="flex p-px lg:col-span-4">
             <div className="overflow-hidden rounded-lg bg-gray-800 ring-1 ring-white/15 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]">
-              <Resume />
+              <EvervaultCard>
+
+              </EvervaultCard>
             </div>
           </div>
           <div className="flex p-px lg:col-span-2">
@@ -356,15 +318,22 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="max-w-2xl">
+        <div className="max-w-4xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            dreamer, thinker, creator
+            <ColourfulText text="dreamer" />, thinker, creator
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            hi!, my name is Himesh Vats & i'm a full stack developer.
+            Hi, I'm <span className='text-teal-500'>HIMESH VATS</span> — A Software Engineer Specializing in Frontend and JavaScript-Based Backend Development
+
           </p>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I have 11+ years of experience in building complex systems to make scaling and collaboration easy for designers and creative teams. Most of my work involves Javascript, HTML, CSS but I also dabble in Python & MongoDB.
-            In previous avatars I have done both User Experience Design & Mobile Application Development as a Freelance developer.
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            With over 11 years of experience, I’m passionate about building complex, high-performance web applications that deliver exceptional user experiences. My expertise spans both frontend and backend development, allowing me to seamlessly bridge the gap between sleek UI/UX and robust, scalable server-side architectures.
+
+          </p>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">From architecture to deployment, I take pride in delivering reliable, maintainable, and performant solutions. Whether you’re looking to develop a new web app, optimize existing systems, or create a mobile experience, I’d love to help turn your ideas into reality.
+
+            Feel free to browse my portfolio, explore my work, and get in touch!
+
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
