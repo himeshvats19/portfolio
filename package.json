@@ -17,6 +17,7 @@
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.4",
     "@opennextjs/cloudflare": "^0.3.8",
+    "@tabler/icons-react": "^3.29.0",
     "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.12",
     "cheerio": "^1.0.0-rc.12",

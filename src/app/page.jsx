@@ -23,6 +23,8 @@ import image5 from '@/images/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
 import Skills from '@/components/Skills'
 import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
+import { WorkExperienceTimeline } from "@/components/WorkExperienceTimeline"
+import { BentoGridDemo } from "@/components/Bento"
 
 function MailIcon(props) {
   return (
@@ -359,8 +361,12 @@ export default async function Home() {
       <Container className="mt-24 md:mt-28">
         <Skills />
       </Container>
+
       <Container className="mt-24 md:mt-28">
-        <Bento />
+        <WorkExperienceTimeline />
+      </Container>
+      <Container className="mt-24 md:mt-28">
+        <BentoGridDemo />
       </Container>
     </>
   )
