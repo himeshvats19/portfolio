@@ -133,46 +133,6 @@ function Role({ role }) {
   )
 }
 
-function Resume() {
-  let resume = [
-    {
-      company: 'Feature Store',
-      title: 'Walmart Global Tech',
-      logo: walmartLogo,
-      start: 'I have 11+ years of experience in building complex systems to make scaling and collaboration easy for designers and creative teams. Most of my work involves Javascript, HTML, CSS but I also dabble in Python & MongoDB. In previous avatars I have done both User Experience Design & Mobile Application Development as a Freelance developer.',
-      end: '',
-    },
-    {
-      company: 'Insights>Ally',
-      title: 'Walmart Global Tech',
-      logo: walmartLogo,
-      start: 'I have 11+ years of experience in building complex systems to make scaling and collaboration easy for designers and creative teams. Most of my work involves Javascript, HTML, CSS but I also dabble in Python & MongoDB. In previous avatars I have done both User Experience Design & Mobile Application Development as a Freelance developer.',
-      end: '',
-    },
-    {
-      company: 'Insights>Ally',
-      title: 'Walmart Global Tech',
-      logo: walmartLogo,
-      start: 'May 2020',
-      end: '',
-    },
-  ]
-
-  return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Recent Projects</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <Role key={roleIndex} role={role} />
-        ))}
-      </ol>
-
-    </div>
-  )
-}
 
 function WorkExperience() {
   let resume = [
@@ -351,6 +311,7 @@ export default async function Home() {
             />
           </div>
         </div>
+
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
@@ -368,7 +329,6 @@ export default async function Home() {
         </div>
         <BentoGridDemo />
       </Container>
-      <BackgroundBeams />
     </>
   )
 }
