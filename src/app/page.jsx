@@ -25,6 +25,7 @@ import Skills from '@/components/Skills'
 import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
 import { WorkExperienceTimeline } from "@/components/WorkExperienceTimeline"
 import { BentoGridDemo } from "@/components/Bento"
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 function MailIcon(props) {
   return (
@@ -337,22 +338,16 @@ export default async function Home() {
             Feel free to browse my portfolio, explore my work, and get in touch!
 
           </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
+          <div className="mt-12 flex gap-6">
             <SocialLink
-              href="#"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="#"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/himeshvats/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
+            />
+            <SocialLink
+              href="https://github.com/himeshvats19"
+              aria-label="Follow on GitHub"
+              icon={GitHubIcon}
             />
           </div>
         </div>
@@ -366,8 +361,14 @@ export default async function Home() {
         <WorkExperienceTimeline />
       </Container>
       <Container className="mt-24 md:mt-28">
+        <div className="max-w-7xl mx-auto py-20 pt-10 pb-0 px-4 md:px-8 lg:px-10">
+          <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+            <BriefcaseIcon className="h-6 w-6 flex-none inline-block" /> Projects
+          </h2>
+        </div>
         <BentoGridDemo />
       </Container>
+      <BackgroundBeams />
     </>
   )
 }

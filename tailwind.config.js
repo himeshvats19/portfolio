@@ -1,12 +1,16 @@
 const typographyPlugin = require('@tailwindcss/typography')
-
 const typographyStyles = require('./typography')
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'selector',
-  plugins: [typographyPlugin],
+  plugins: [typographyPlugin, addVariablesForColors],
   theme: {
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
@@ -25,4 +29,16 @@ module.exports = {
     },
     typography: typographyStyles,
   },
+};
+
+function addVariablesForColors({
+  addBase,
+  theme
+}) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+
+  addBase({
+    ":root": newVars,
+  });
 }
