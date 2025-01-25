@@ -321,14 +321,14 @@ export default async function Home() {
       <Container className="mt-24 md:mt-28">
         <WorkExperienceTimeline />
       </Container>
-      <Container className="mt-24 md:mt-28">
+      {/* <Container className="mt-24 md:mt-28">
         <div className="max-w-7xl mx-auto py-20 pt-10 pb-0 px-4 md:px-8 lg:px-10">
           <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
             <BriefcaseIcon className="h-6 w-6 flex-none inline-block" /> Projects
           </h2>
         </div>
         <BentoGridDemo />
-      </Container>
+      </Container> */}
     </>
   )
 }

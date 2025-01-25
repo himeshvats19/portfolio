@@ -7,43 +7,39 @@ import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
+import walmartLogo from '@/images/walmartLogo.jpg'
+import icfLogo from '@/images/logos/icf.png'
+import avatarImage from '@/images/avatar.jpg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Insights Ally',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Insights Ally is a self-serve data visualization and analytics tool for individuals and organizations.',
+    link: { href: '/projects/insights-ally', label: 'Walmart Global Tech' },
+    logo: walmartLogo,
   },
   {
-    name: 'Animaginary',
+    name: 'Amway MyBiz',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Mybiz – The new way to monitor & manage your business.',
+    link: { href: '/projects/amway-mybiz', label: 'ICF Next' },
+    logo: icfLogo,
   },
   {
-    name: 'HelioStream',
+    name: 'Amway FAA',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      ' New FAA Program Educational Simulator',
+    link: { href: '/projects/amway-faa', label: 'ICF Next' },
+    logo: icfLogo,
   },
   {
-    name: 'cosmOS',
+    name: 'Buy Blue',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
-  },
+      'Shopify E-Commerce Theme',
+    link: { href: '/projects/buy-blue', label: 'Personal Project' },
+    logo: avatarImage,
+  }
 ]
 
 function LinkIcon(props) {
@@ -66,8 +62,16 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are my official projects for which I can not share much details, but my personal projects are on github and can be found here : "
     >
+      <div className="absolute right-5 top-10">
+        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+            <a href="https://github.com/himeshvats19" target="_blank">My Github</a>
+          </span>
+        </button>
+      </div>
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
@@ -78,7 +82,7 @@ export default function Projects() {
               <Image
                 src={project.logo}
                 alt=""
-                className="h-8 w-8"
+                className="h-8 w-8 rounded-2xl"
                 unoptimized
               />
             </div>

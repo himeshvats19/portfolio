@@ -24,56 +24,72 @@ function Appearance({ title, description, event, cta, href }) {
 }
 
 export const metadata = {
-  title: 'Speaking',
+  title: 'Blogs',
   description:
-    'I’ve spoken at events all around the world and been interviewed for many podcasts.',
+    'I write Blogs on Tech, Formula 1 Racing, Games & Music.',
 }
 
 export default function Speaking() {
   return (
     <SimpleLayout
-      title="I’ve spoken at events all around the world and been interviewed for many podcasts."
-      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+      title="Tech Blogs, Music Videos & more"
+      intro="I write Blogs on Tech, Make Music Videos on Youtube and discuss about Formula 1, Videos Games & Code on Reddit."
     >
       <div className="space-y-20">
-        <SpeakingSection title="Conferences">
+        <SpeakingSection title="Tech Blogs">
           <Appearance
-            href="#"
-            title="In space, no one can watch you stream — until now"
-            description="A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth."
-            event="SysConf 2021"
-            cta="Watch video"
+            href="https://medium.com/@himeshvats19/javascript-functions-5d592a070505"
+            title="JavaScript — Functions"
+            description="…You will need to know this…at least"
+            event="Medium"
+            cta="Read More"
           />
           <Appearance
-            href="#"
-            title="Lessons learned from our first product recall"
-            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
-            event="Business of Startups 2020"
-            cta="Watch video"
+            href="https://medium.com/@himeshvats19/class-based-inheritance-prototypes-in-javascript-9e05e31fe9"
+            title="Class based Inheritance & Prototypes in JavaScript"
+            description="Does JavaScript has classes? Well Yes, but not really..."
+            event="Medium"
+            cta="Read More"
           />
+          <Appearance
+            href="https://medium.com/@himeshvats19/scopes-closures-in-javascript-ac210b8410fb"
+            title="Scopes & Closures in JavaScript"
+            description="Not sure if my function or a function inside my function..."
+            event="Medium"
+            cta="Read More"
+          />
+          <Appearance
+            href="https://medium.com/@himeshvats19/callbacks-promises-cbf7716d6b4d"
+            title="Callbacks & Promises"
+            description="Promise me, you will read it till the time you hear back..."
+            event="Medium"
+            cta="Read More"
+          />
+          <Appearance
+            href="https://medium.com/@himeshvats19/es6-features-javascript-4a9caf8aa74d"
+            title="ES6 Features — JavaScript"
+            description="ES6, Please Please Please"
+            event="Medium"
+            cta="Read More"
+          />
+
         </SpeakingSection>
-        <SpeakingSection title="Podcasts">
+        <SpeakingSection title="Music Videos">
           <Appearance
-            href="#"
-            title="Using design as a competitive advantage"
-            description="How we used world-class visual design to attract a great team, win over customers, and get more press for Planetaria."
-            event="Encoding Design, July 2022"
-            cta="Listen to podcast"
+            href="https://www.youtube.com/watch?v=Jr5xzTbfs4k"
+            title="Club Mix"
+            description=""
+            event="Youtube"
+            cta="Listen to my Music"
           />
           <Appearance
-            href="#"
-            title="Bootstrapping an aerospace company to $17M ARR"
-            description="The story of how we built one of the most promising space startups in the world without taking any capital from investors."
-            event="The Escape Velocity Show, March 2022"
-            cta="Listen to podcast"
+            href="https://www.youtube.com/watch?v=0z7iDSLpniQ"
+            title="Saathiya [Bollywood, LoFi, Chill, Trap Mix] - Himesh Vats"
+            description=""
+            event="Youtube"
+            cta="Listen to my Music"
           />
-          <Appearance
-            href="#"
-            title="Programming your company operating system"
-            description="On the importance of creating systems and processes for running your business so that everyone on the team knows how to make the right decision no matter the situation."
-            event="How They Work Radio, September 2021"
-            cta="Listen to podcast"
-          />
+
         </SpeakingSection>
       </div>
     </SimpleLayout>
