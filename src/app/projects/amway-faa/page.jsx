@@ -59,13 +59,13 @@ export default function Example() {
           </h3>
           <p>HTML5, CSS3, Angular 2, Gulp</p>
         </div>
-        <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+        <div className="mx-auto  max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
           <Image src={faa2} alt="" className="h-full w-full mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10" unoptimized />
         </div>
-        <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Image src={faa3} alt="" className="h-full w-full mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10" unoptimized />
         </div>
-        <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
           <Image src={faa4} alt="" className="h-full w-full mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10" unoptimized />
         </div>
         <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">

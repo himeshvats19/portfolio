@@ -43,7 +43,6 @@ export const metadata = {
   description:
     'I’m Himesh Vats. I live in Bengaluru, India where I design & develop amazing products. Currently building the future retail tech for Walmart Global Tech.',
 }
-const words = `I live in Bengaluru, India where I design & develop amazing products. Currently building the future retail tech for Walmart Global Tech.'`
 export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
@@ -60,10 +59,20 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h3 className="text-2sm font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            'I’m Himesh Vats.
+            'I’m Himesh Vats 😃
+
           </h3>
+          <p>💻 Softwarer Engineer & 🎹 Music Producer</p>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <TextGenerateEffect words={words} />
+            I live in Bengaluru, India where I design & develop amazing products. Currently building the future retail tech for Walmart Global Tech.
+          </div>
+          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <p>I am a Computer Science Engineering graduate, having completed my degree in 2013. Over the past 12 years, I've built a strong career in Frontend development, initially starting out in UX/UI design before transitioning to development. </p>
+            <p>I began working with JavaScript frameworks like AngularJS and PolymerJS, which laid the foundation for my expertise in frontend technologies. Today, I specialize in building dynamic, user-friendly web applications, and I also have strong experience in Backend development with Node.js and Next.js, allowing me to work across the full stack.</p>
+            <p> In addition to my professional work, I actively participate in hackathons to push my skills and stay excited about new technologies. Outside of coding, I have a passion for music production and DJing, sharing my tracks on platforms like Soundcloud and YouTube. When I’m not creating or coding, you’ll find me watching Formula 1 or enjoying games like Assassin's Creed.</p>
+          </div>
+          <div>
+
           </div>
         </div>
         <div className="lg:pl-20">
