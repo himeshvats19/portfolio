@@ -290,7 +290,7 @@ export default async function Home() {
 
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            With over 11 years of experience, I’m passionate about building complex, high-performance web applications that deliver exceptional user experiences. My expertise spans both frontend and backend development, allowing me to seamlessly bridge the gap between sleek UI/UX and robust, scalable server-side architectures.
+            With over 12 years of experience, I’m passionate about building complex, high-performance web applications that deliver exceptional user experiences. My expertise spans both frontend and backend development, allowing me to seamlessly bridge the gap between sleek UI/UX and robust, scalable server-side architectures.
 
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">From architecture to deployment, I take pride in delivering reliable, maintainable, and performant solutions. Whether you’re looking to develop a new web app, optimize existing systems, or create a mobile experience, I’d love to help turn your ideas into reality.
